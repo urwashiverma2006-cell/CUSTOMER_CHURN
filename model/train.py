@@ -4,8 +4,8 @@ from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 import joblib
 
-# Load the dataset
-df = pd.read_csv(r"C:\Teleco- Customer\data\WA_Fn-UseC_-Telco-Customer-Churn.csv")
+# Load the dataset using a relative path
+df = pd.read_csv("data/WA_Fn-UseC_-Telco-Customer-Churn.csv")
 
 # Preprocess the dataset
 X = pd.get_dummies(df.drop(['customerID', 'Churn'], axis=1), drop_first=True)
